@@ -25,25 +25,6 @@ Database: MongoDB with Mongoose
 Utilities: Cookie Parser, Express Middleware
 
 -------------------------------------------
-Project Structure
-
-project/
-├── Models/
-│   ├── userModel.js
-│   └── post.js
-├── Public/
-├── Views/
-│   ├── Register.ejs
-│   ├── login.ejs
-│   ├── home.ejs
-│   ├── post.ejs
-│   ├── myposts.ejs
-│   ├── allpost.ejs
-│   └── editPage.ejs
-├── index.js
-├── package.json
-└── .gitignore
-
 Installation and Running Locally
 
 1. Clone the repository
@@ -57,3 +38,26 @@ Installation and Running Locally
 
 The app will be available at http://localhost:3000
 
+---------------------------------------------------
+Routes Overview
+
+User Authentication
+GET /                Registration page
+POST /create/user    Register a new user
+GET /login           Login page
+POST /login          Authenticate and log in
+GET /logout          Log out and clear cookies
+_________________________
+
+Home and Posts
+GET /home            Authenticated home page
+GET /post            Post creation page
+POST /create/post    Create a new post
+POST /allpost        View all posts
+POST /post/:id       View posts by specific user
+GET /like/:id        Like a specific post
+_________________________
+
+Post Management
+GET /editpost/:id         Render post edit form
+POST /editProcess/:id     Update post content
