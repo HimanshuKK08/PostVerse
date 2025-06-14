@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Stylesheets/alldisplay.css">
+</head>
+
+<body>
+    <div class="display">
+        <h1 style="text-align: center; margin-top: 20px;">All the post</h1>
+        <div class="post-parent">
+            <% if(posts.length===0){ %>
+                <h1>No Posts Yet</h1>
+                <% } else { %>
+                    <% posts.forEach((eachpost)=> { %>
+                        <div class="post">
+                            <h3>
+                                <%= eachpost.title %>
+                            </h3>
+                            <p>
+                                <%= eachpost.content %>
+                            </p>
+                            <div class="items">
+                                <a href="/like/<%= eachpost._id %>" id="like">like (<%= eachpost.likes.length %>)</a>
+                                <!-- <a href="" id="edit">edit</a> -->
+                            </div>
+                        </div>
+                        <% }) %>
+                            <% } %>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

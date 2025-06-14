@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Stylesheets/home.css">
+</head>
+<body>
+    <h1 style="position: absolute; top: 30px;">PostVerse - A universe of posts with secure user access</h1>
+    <div class="container">
+        <img src="<%= user.url %>" alt="Kanha">
+        <h1 style="text-align: center;">Welcome <%= user.username%></h1>
+        <span>Total Post: <%= user.post.length%></span>
+        <form action="/allpost" method="post">
+            <button> All Posts</button>
+        </form>
+        <form action="/post/<%= user._id %>" method="post">
+            <button>My Post</button>
+        </form>
+        <form action="/post" method="get">
+            <button>Add Post</button>
+        </form>
+        <form action="/logout" method="get">
+            <button>Log Out</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>
