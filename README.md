@@ -42,6 +42,7 @@ The app will be available at http://localhost:3000
 Routes Overview
 
 User Authentication
+
 GET /                Registration page
 
 POST /create/user    Register a new user
@@ -55,14 +56,23 @@ GET /logout          Log out and clear cookies
 _________________________
 
 Home and Posts
+
 GET /home            Authenticated home page
+
 GET /post            Post creation page
+
 POST /create/post    Create a new post
+
 POST /allpost        View all posts
+
 POST /post/:id       View posts by specific user
+
 GET /like/:id        Like a specific post
+
 _________________________
 
 Post Management
+
 GET /editpost/:id         Render post edit form
+
 POST /editProcess/:id     Update post content
