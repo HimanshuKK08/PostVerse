@@ -43,10 +43,15 @@ Routes Overview
 
 User Authentication
 GET /                Registration page
+
 POST /create/user    Register a new user
+
 GET /login           Login page
+
 POST /login          Authenticate and log in
+
 GET /logout          Log out and clear cookies
+
 _________________________
 
 Home and Posts
