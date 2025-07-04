@@ -76,3 +76,15 @@ Post Management
 GET /editpost/:id         Render post edit form
 
 POST /editProcess/:id     Update post content
+
+Author
+
+Himanshu Khandelwal  
+GitHub: https://github.com/HimanshuKK08  
+Email: himanshu.khandelwal12@vit.edu
+
+Future Improvements
+- Add comments on posts
+- Add pagination for large post lists
+- Improve UI/UX with frontend framework (React or Tailwind)
+- Add profile pictures or user avatars
